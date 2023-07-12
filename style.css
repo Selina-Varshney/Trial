@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: linear-gradient(to bottom, rgb(224, 87, 87),maroon);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 40px;
+    text-align: center;
+}
+
+h1{
+    font-size: 40px;
+    margin-bottom:25px;
+
+}
+
+h2{
+    margin: 25px;
+    
+}
+
+p{
+    margin-bottom: 15px;
+}
+
+.first{
+    color: aliceblue;
+
+}
+
+#form1{
+    background-color: rgb(73, 171, 73);
+    border: 3px solid black;
+    width:400px;
+    padding:15px;
+    margin: 25px 50px 0px 380px;
+    
+}
+
+input,button{
+    margin-bottom: 10px;
+    font-size:20px;
+}
+
+a{
+    background-color: green;
+    color: gold;
+}
+
+#form1 h2{
+    color:maroon;
+    
+}
+
+#mc{
+    width: 700px;
+    height: 400px;
+
+}

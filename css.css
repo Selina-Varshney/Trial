@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,wght@1,300&display=swap');
+
+
+*{
+    font-family: 'Playfair', serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    /* means height width etc added would include the border */
+    text-decoration: none;
+    /* for things like underline, overline */
+    outline: none;
+    /* outline is outside */
+    border: none;
+    /* border is inside */
+    
+    /* makes every word's alphabet capital  */
+    transition: all .2s linear;
+
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    /* agar content out of bounds jae to hide kardo */
+    /* unnecessary: */
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+    
+
+}
+
+header{
+    position: fixed;
+    top:0; left:0; right:0; 
+    background: #fff;
+    padding: 1rem 7%;
+    display: flex;
+    /* flex means not like block continuous */
+    /* unnecessary: */
+    align-items: center; 
+    justify-content: space-between;
+    /* means justify the contents evenly in space */
+    z-index: 1000;
+    /* box-shadow: var(--box-shadow); */
+    box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    
+}
+
+header .logo{
+color: black;
+font-size: 3rem;
+font-weight: bolder;
+}
+
+header .logo i{
+    color: maroon;
+    padding-right: 1rem;
+    
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding:0.5rem 1.5rem;
+    /* top and bottom 0.5, left and right 1.5 rem */
+    color: grey;
+
+}
+
+header .navbar a:hover{
+    color:#fff;
+    background: green;
+    border-radius: .5rem;
+}
+
+
+header .icons i, header .icons a{
+    cursor: pointer;
+    height:4.5rem; width:4.5rem;
+    margin-left: 0.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: black;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+header .icons a:hover,header .icons i:hover{
+    color: #fff;
+    background-color: green;
+    transform: rotate(360deg);
+    transition-duration: 0.1s;
+}
+
+#search-form {
+    position:fixed;
+    top:-110%; left:0;
+    height:100%; width:100%;
+    z-index: 1004;
+    background: grey;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding:0 1rem;
+
+}
+
+#search-form.active{
+    top:0;
+}
+
+#search-form #search-box{
+    width:50rem;
+    border-bottom: .1rem solid #fff;
+    padding:1rem 0;
+    color:#fff;
+    font-size:3rem;
+    text-transform: none;
+    background: none;
+
+}
+
+#search-form #search-box:placeholder{
+    color:white;
+}
+
+#search-form #search-box::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+}
+
+#search-form label{
+    color:#fff;
+    cursor:pointer;
+    font-size: 3rem;
+}
+
+#search-form label:hover{
+    color: green;
+}
+
+#search-form #close{
+    position : absolute;
+    color:#fff;
+    cursor:pointer;
+    top: 2rem; right:3rem;
+    font-size: 5rem;
+
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.home .home-slider .slide{
+    display: flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:2rem;
+    padding-top: 9rem;
+    justify-content: flex-end; /* Add this line */
+ }
+
+ .home .home-slider .slide .content{
+    flex: 1 1 45rem;
+
+ }
+
+ .home .home-slider .slide .image img{
+  width:700px;
+  height:700px;
+  border-radius: 50%;
+ }
+
+ .home .home-slider .slide .content span{
+    color: maroon;
+    font-size: 4rem;
+    font-weight: bolder;
+
+ }
+
+ .home .home-slider .slide .content h3{
+    color: black;
+    font-size: 5rem;
+
+ }
+
+ .home .home-slider .slide .content p{
+    color: black;
+    font-size: 2.5rem;
+
+ }
+
+ .btn{
+    margin-top: 2rem;
+    padding:1rem;
+    display: inline-block;
+    font-size: 2.5rem;
+    color: #fff;
+    background-color: rgb(70, 47, 38);
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+ }
+
+ .btn:hover{
+    background-color: green;
+    letter-spacing: .1rem;
+ }
+
+
+/* 
+/* media query: an if statemnt in css */
+/* for a tablet: */
+
+@media(max-width:768px){
+    
+header .icons #menu-bars{
+    display:inline-block;
+
+}
+
+header .navbar{
+    position: absolute;
+    top: 100%; left:0; right:0;
+    background:#fff;
+    border-top:0.5rem solid black;
+    padding: 1rem;
+    clip-path:none;
+
+}
+
+header .navbar.active{
+    clip-path:none;
+}
+
+header .navbar a{
+    display: block;
+    padding:1.5rem;
+    margin: 1rem;
+    font-size: 2 rem;
+    color: #fff;
+    background-color: grey;
+}
+
+
+
+}
+
+@media(max-width:991px){
+    
+    html{
+        font-size: 55%;
+       
+    }
+
+}
+
